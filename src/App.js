@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useEffect,useState} from 'react'
+import Navbar from './Components/Navbar'
+import {getMatches} from "./api/Api"
+import MyCard from './Components/MyCard'
 import './App.css';
+const App = () => {
 
-function App() {
+const [matches, setmatches] = useState([]);
+  useEffect(() => {
+    getMatches().then((data)=>setmatches(data.matches))
+      .catch((error)=>console.log("ERROR:",error));
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar/>
+      <h2> Cricket Live Match Updates <span class="material-icons icon">sports_cricket</span></h2>
+     {
+       matches.map((match)=>(
+         <MyCard match="match"/>
+       ))
+     }
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
