@@ -2,6 +2,7 @@ import React,{useEffect,useState} from 'react'
 import Navbar from './Components/Navbar'
 import {getMatches} from "./api/Api"
 import MyCard from './Components/MyCard'
+import { Container, Grid} from "@material-ui/core";
 import './App.css';
 const App = () => {
 
@@ -14,11 +15,15 @@ const [matches, setmatches] = useState([]);
     <div>
       <Navbar/>
       <h2> Cricket Live Match Updates <span class="material-icons icon">sports_cricket</span></h2>
-     {
-       matches.map((match)=>(
-         <MyCard match="match"/>
-       ))
-     }
+      <Container>
+        <Grid container>
+          <Grid item xs={12}>
+            {matches.map((match) => (
+              <MyCard match={match}></MyCard>
+            ))}
+          </Grid>
+        </Grid>
+      </Container>
     </div>
   )
 }
