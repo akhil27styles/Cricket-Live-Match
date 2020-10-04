@@ -1,8 +1,15 @@
-.imgnav{
-    height: 400px;
+.jumbo{
+  background-color:limegreen;
+
 }
+
+h2{
+  color:white;
+  text-align: center;
+  font-family: 'Days One', sans-serif;
+  font-size: 100px;
+}
+
 @media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
-    .imgnav {
-        height: 400px;
-    }
+ 
   }

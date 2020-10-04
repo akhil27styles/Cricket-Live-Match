@@ -3,6 +3,8 @@ import Navbar from './Components/Navbar'
 import {getMatches} from "./api/Api"
 import MyCard from './Components/MyCard'
 import { Container, Grid} from "@material-ui/core";
+import News from './News/News'
+import Scheduled from './Components/Scheduled'
 import './App.css';
 const App = () => {
 
@@ -14,8 +16,10 @@ const [matches, setmatches] = useState([]);
   return (
     <div>
       <Navbar/>
-      <h2> Cricket Live Match Updates <span class="material-icons icon">sports_cricket</span></h2>
-      <Container>
+      <News/>
+      <Scheduled/>
+      <Container className="Cont">
+
         <Grid container>
           <Grid item xs={12}>
             {matches.map((match) => (
@@ -24,6 +28,7 @@ const [matches, setmatches] = useState([]);
           </Grid>
         </Grid>
       </Container>
+      
     </div>
   )
 }

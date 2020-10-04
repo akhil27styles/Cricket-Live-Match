@@ -1,3 +1,25 @@
 h5{
     color:rgb(245, 72, 72);
 }
+.newsimg{
+    width: 90%;
+    height: 70%;
+}
+h4{
+    
+        font-family: 'Days One', sans-serif;
+        color:red;
+        font-size: 20px;
+        text-align: left;
+}
+.Cont{
+    margin-top: -360rem;
+}
+.News{
+    margin-left: 30px;
+}
+.Scheduled{
+    margin-right: 20px;
+    margin-top: -359rem;
+    float: right;
+}

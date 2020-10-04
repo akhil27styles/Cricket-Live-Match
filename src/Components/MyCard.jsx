@@ -25,25 +25,27 @@ const MyCard = ({ match }) => {
     <div>
       <Card
         style={{
-          background: match.matchStarted ? "rgb(2,0,36)" : "",
+         
+          background:  "#002847",
           marginTop: 15,
         }}
       >
         <CardContent>
+          <h6 style={{color:"white",textAlign:"center",fontFamily:"cursive"}}> {match.matchStarted ? "" : "Yet Not Started"}</h6>
           <Grid container justify="center" alignItems="center" spacing={4}>
             <Grid item>
-              <Typography variant="h5">{match["team-1"]}</Typography>
+              <Typography variant="h5" style={{color:"white"}}>{match["team-1"]}</Typography>
             </Grid>
             <Grid item>
               <img
                 style={{ width: 85 }}
                 
-                src={require("../img/Dream.jpg")}                
+                src={require("../img/vs.png")}                
                 alt=""
               />
             </Grid>
             <Grid item>
-              <Typography variant="h5">{match["team-2"]}</Typography>
+              <Typography variant="h5" style={{color:"white"}}>{match["team-2"]}</Typography>
             </Grid>
           </Grid>
         </CardContent>
@@ -59,13 +61,11 @@ const MyCard = ({ match }) => {
             >
               Show Detail
             </Button>
-            <Button
-              style={{ marginLeft: 5 }}
-              variant="outlined"
-              color="primary"
+            <p
+              style={{ marginLeft: "20px",marginTop:"10px",color:"white"}}
             >
               Starting time {new Date(match.dateTimeGMT).toLocaleString()}
-            </Button>
+            </p>
           </Grid>
         </CardActions>
       </Card>

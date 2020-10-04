@@ -19,3 +19,26 @@ export const getMatchDetail = (id) => {
     .then((response) => response.json())
     .catch((error) => console.log(error));
 };
+
+//Match Scheduled
+export const getScheduled = () => {
+  const url = `https://cricapi.com/api/matchCalendar?apikey=${API_KEY}`;
+  console.log("URL", url);
+  return fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .catch((error) => {
+      console.log("ERROR ", error);
+    });
+};
+
+// Sports News
+const NEWS_API_KEY='c7509427056f4b628f43dbb5e9d0e1fa';
+export const getSportsDetail = () => {
+  const url = `http://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=${NEWS_API_KEY}`;
+  console.log("URL", url);
+  return fetch(url)
+    .then((response) => response.json())
+    .catch((error) => console.log(error));
+};
