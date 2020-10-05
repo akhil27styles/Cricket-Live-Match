@@ -16,6 +16,9 @@ const [matches, setmatches] = useState([]);
   return (
     <div>
       <Navbar/>
+      <img className="gif" src="kai.gif" alt="gif"/>
+      <img className="gif1" src="kai1.gif" alt="gif"/>
+      <img className="Brave" src="Brave.gif" alt="gif"/>
       <News/>
       <Scheduled/>
       <Container className="Cont">

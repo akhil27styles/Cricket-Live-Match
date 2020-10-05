@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
       <Jumbotron fluid className="jumbo">
       <Container>
-      <h2 style={{color:"white",fontFamily: " 'Days One', sans-serif",fontSize: "100px"}}> Cricket Updates <span class="material-icons icon">sports_cricket</span></h2>
+      <h2 style={{color:"white",fontFamily: " 'Days One', sans-serif",fontSize: "100px"}}> Cricket Updates <span class="material-icons icon" style={{fontSize: "100px"}}>sports_cricket</span></h2>
       </Container>
     </Jumbotron>
   );
